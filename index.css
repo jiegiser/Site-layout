@@ -1,0 +1,187 @@
+
+		.clr{
+			clear: both;
+			width: 0px;
+			height: 0px;
+		}
+		#container{
+			width: 1002px;
+			margin:0 auto;
+		}
+		#header{
+            height: 128px;
+			background:gray url(images/top_bg.jpg);
+			
+		}
+		/*li为块状元素所以我们需要一行显示，让li浮动*/
+		#nav li{
+			width: 90px;
+			height: 37px;
+			margin-right: 2px;
+			float: left;
+		}
+		#nav a{
+			font-size: 16px;
+			line-height: 37px;
+			font-family: "微软雅黑";
+			color: #363636;
+			/*这里给a加了背景图片之后，只是自高度显示，想要给a设置
+			高，但是他是内联元素，所以可以将它转换为块级元素*/
+			display: block;
+			width: 90px;
+			height: 37px;
+			text-align: center;
+			text-decoration: none;
+		}
+		#nav a:hover{
+			color: white;
+			background:url(./images/nav_on.gif);
+		}
+		#banner{
+			margin: 6px 0;
+		}
+		#main{
+
+		}
+		/*让lisde与rside一左一右显示使用float*/
+		#lside{
+			height: 480px;
+			width: 694px;
+			border: 1px solid #EEE;
+			float: left;
+			border-radius: 5px;
+			border-top: none;
+
+		}
+		.subtitle{
+			height: 37px;
+			background:gray url(./images/index_main_top_bg.gif);
+		}
+		/*初始化将图片为块状元素，使用float让他往左浮动*/
+		.subtitle img{
+			margin:5px 0 0 10px;
+			float: left;
+		}
+		.subtitle h1{
+			color: #151515;
+			line-height: 37px;
+			float: left;
+			margin-left: 10px;
+			font-size:16px;
+			font-family:'Microsoft Yahei',SimHei,sans-serif;
+		}
+		.subtitle a{
+			display: block;
+			line-height: 37px;
+			color: #888;
+			font-size: 12px;
+			font-family: Simsum,sans-serif;
+			float: right;
+			text-decoration: none;
+		}
+		.four{
+			width: 326px;
+			height:200px;
+			background: #eee;
+			margin:10px;
+			float: left;
+			_display:inline;
+		}
+		.four img{
+			margin-left: 10px;
+			padding: 6px;
+			background: white;
+			float: left;
+		}
+		.four ul{
+			margin-left: 3px;
+			float: left;
+		}
+		.four li{
+			background:url(./images/service_intro_bg.gif);
+			background-repeat: no-repeat;
+			padding-left: 10px;
+			height: 20px;
+		}
+		.four h2{
+			color: #A0A0A0;
+			margin:6px 0 6px 10px;
+			font-size:16px;
+			font-family:'Microsoft Yahei',SimHei,sans-serif;
+		}
+		.four a{
+			font-size: 12px;
+			color: #888;
+			text-decoration: none;
+		}
+		.four a:visited{
+			color: #808080;
+		}
+		.four a:hover{
+			color: #ff832c;
+		}
+		#rside{
+			width: 294px;
+			float: right;
+		}
+		#art{
+			background:#fff;
+			margin-top: 1px;
+			padding-top: 10px;
+		}
+		/*在这里给a标签加了一个背景图片，但是我们发现网页上当我们鼠标
+		移动到a标签时，会出现一个背景图片，于是在a:hover也加一个背景图片*/
+		#art a{
+			font-size: 12px;
+			line-height: 29px;
+			color: #888;
+			text-decoration: none;
+			display: block;
+			height: 29px;
+			padding-left: 30px; 
+			background:url(./images/article_head.gif);
+			background-repeat: no-repeat;
+		}
+		#art a:hover{
+			color: #ff832c;
+			background: url(./images/article_on_bg.gif);
+		}
+		#contact{
+			margin-top: 1px;
+			height: 249px;
+			background: #EEE;
+		}
+		#footer{
+			text-align: center;
+			margin-top: 15px;
+			border-radius: 5px;
+			height: 120px;
+		}
+		#footer a{
+			text-decoration: none;
+		}
+		#footer a:visited{
+			color: #808080;
+		}
+		#footer a:hover{
+			color: #ff832c;
+		}
+		#footer ul{
+			padding-left: 250px;
+			height: 40px;
+			background: #EEE;
+		}
+		#footer li{
+			line-height: 12px;
+			font-size: 12px;
+			float: left;
+			margin-top:15px;		 
+			margin-right:10px;
+		}
+
+		#footer address{
+			margin-top: 12px;
+			font-size: 12px;
+			font-family:'微软雅黑',sans-serif; 
+		}
+

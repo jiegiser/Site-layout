@@ -1,81 +1,114 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>几何对象测试</title>
-    <link rel="stylesheet" href="http://js.arcgis.com/3.8/js/dojo/dijit/themes/tundra/tundra.css" />
-    <link rel="stylesheet" href="http://js.arcgis.com/3.8/js/esri/css/esri.css" />
-    <link rel="stylesheet" href="js/webgis2book/widgets/themes/darkangel/darkangel.css" />
-    <link rel="stylesheet" href="js/webgis2book/widgets/themes/darkangel/override.css" />
-    <style>
-        html, body, #mapDiv {
-            padding: 0;
-            margin: 0;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-    <script>
-        var dojoConfig = {
-            isDebug: true,
-            async: true,
-            packages: [{
-                "name": "webgis2book",
-                "location": location.pathname.replace(/\/[^/]+$/, "") + "/js/webgis2book"
-            }]
-        };
-    </script>
-    <script src="http://js.arcgis.com/3.8/"></script>
-    <script>
-        var map, drawWidget = null;
-
-        require(["dojo/parser", "dojo/topic", "dijit/registry",
-            "esri/map", "esri/layers/ArcGISTiledMapServiceLayer",
-            "webgis2book/widgets/DrawWidget", "webgis2book/widgets/Menu", "webgis2book/widgets/MenuItem",
-            "webgis2book/widgets/WidgetContainer", "webgis2book/widgets/MenuFrame",
-            "dojo/domReady!"],
-            function (parser, topic, registry, Map, ArcGISTiledMapServiceLayer, DrawWidget, Menu) {
-                parser.parse();
-
-                map = new Map("mapDiv");
-                var agoServiceURL = "http://server.arcgisonline.com/ArcGIS/rest/services/ESRI_StreetMap_World_2D/MapServer";
-                var agoLayer = new ArcGISTiledMapServiceLayer(agoServiceURL);
-                map.addLayer(agoLayer);
-
-                createWidget();
-                createMenu();
-
-                function createWidget() {
-                    drawWidget = new DrawWidget();
-                    drawWidget.setTitle("绘图工具");
-                    drawWidget.setMap(map);
-                    drawWidget.startup();
-                }
-
-                function createMenu() {
-                    var menuFrame = registry.byId('menuFrame');
-                    var logoUrl = require.toUrl("webgis2book/widgets/assets/images/logo.png");
-                    menuFrame.setFrameIcon(logoUrl);
-                    menuFrame.setTitle("菜单");
-
-                    var params = { label: "工具", icon: "assets/images/icons/i_globe.png", id: "menuMap", positionAsPct: 20, visible: true };
-                    var toolMenu = new Menu(params);
-                    toolMenu.addMenuItem({ label: "小部件测试", icon: "assets/images/icons/i_highway.png", visible: true, onMenuItemClick: testMenuItemClick });
-                    menuFrame.addChild(toolMenu);
-                    toolMenu.startup();
-                }
-
-                function testMenuItemClick(evt) {
-                    topic.publish("showWidget", drawWidget);
-                }
-
-            });
-    </script>
+	<title>实战首页布局</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="yahu.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
-<body class="tundra">
-    <div id="mapDiv">
-        <div data-dojo-type="webgis2book/widgets/MenuFrame" id='menuFrame' style="left: 100px;"></div>
-        <div data-dojo-type="webgis2book/widgets/WidgetContainer" id='widgetContainer'></div>
-    </div>
+<body>
+<div id="container">
+	<div id="header">
+		<img src="./images/logo.jpg" id="logo" alt="logo">
+		<ul id="nav">
+			<li><a href="#">导航1</a></li>
+			<li><a href="#">导航2</a></li>
+			<li><a href="#">导航3</a></li>
+			<li><a href="#">导航4</a></li>
+			<li><a href="#">导航5</a></li>
+			<li><a href="#">导航6</a></li>
+			<li><a href="#">导航7</a></li>
+		</ul>
+	</div>
+	<img id="banner" src="./images/about_banner.jpg">
+	<div id="main">
+		<div id="lside">
+			<div class="subtitle">
+				<img src="./images/circle.gif" alt=""/>
+				<h1>核心业务</h1>
+				<a href="#">MORE&gt;&gt;</a>
+			</div>
+			<div class="four">
+				<h2>电子商务网站建设</h2>
+				<img src="./images/eshop_service.jpg" alt="">
+				<ul>
+					<li><a href="#">方便的订单管理1</a></li>
+					<li><a href="#">方便的订单管理2</a></li>
+					<li><a href="#">方便的订单管理3</a></li>
+					<li><a href="#">方便的订单管理4</a></li>
+					<li><a href="#">方便的订单管理5</a></li>
+				</ul>
+			</div>
+			<div class="four">
+				<h2>电子商务网站建设</h2>
+				<img src="./images/eshop_service.jpg" alt="">
+				<ul>
+					<li><a href="#">方便的订单管理1</a></li>
+					<li><a href="#">方便的订单管理2</a></li>
+					<li><a href="#">方便的订单管理3</a></li>
+					<li><a href="#">方便的订单管理4</a></li>
+					<li><a href="#">方便的订单管理5</a></li>
+				</ul>
+			</div>
+			<div class="four">
+				<h2>电子商务网站建设</h2>
+				<img src="./images/eshop_service.jpg" alt="">
+				<ul>
+					<li><a href="#">方便的订单管理1</a></li>
+					<li><a href="#">方便的订单管理2</a></li>
+					<li><a href="#">方便的订单管理3</a></li>
+					<li><a href="#">方便的订单管理4</a></li>
+					<li><a href="#">方便的订单管理5</a></li>
+				</ul>
+			</div>
+			<div class="four">
+				<h2>电子商务网站建设</h2>
+				<img src="./images/eshop_service.jpg" alt="">
+				<ul>
+					<li><a href="#">方便的订单管理1</a></li>
+					<li><a href="#">方便的订单管理2</a></li>
+					<li><a href="#">方便的订单管理3</a></li>
+					<li><a href="#">方便的订单管理4</a></li>
+					<li><a href="#">方便的订单管理5</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="rside">
+			<div class="subtitle">
+				<img src="./images/circle.gif" alt=""/>
+				<h1>文章观点</h1>
+				<a href="#">MORE&gt;&gt;</a>
+			</div>
+			<ul id="art">
+				<li><a href="#">文章列表1</a></li>
+				<li><a href="#">文章列表2</a></li>
+				<li><a href="#">文章列表3</a></li>
+				<li><a href="#">文章列表4</a></li>
+				<li><a href="#">文章列表5</a></li>
+			</ul>
+			<div class="subtitle">
+				<img src="./images/circle.gif" alt=""/>
+				<h1>联系我们</h1>
+				<a href="#">MORE&gt;&gt;</a>
+			</div>
+			<div id="contact"></div>
+		</div>
+		<!--由于我们的lside与rside已经浮动，foooter元素会在他们两个的下面，所以我们可以人为的添加一个空的div他的class为clr，用于专门清除浮动,那需要就添加-->
+		<div class="clr"></div>
+	</div>
+	<div id="footer">
+		<ul>
+			<li><a href="#">联系我们1</a></li>
+			<li><a href="#">联系我们2</a></li>
+			<li><a href="#">联系我们3</a></li>
+			<li><a href="#">联系我们4</a></li>
+			<li><a href="#">联系我们5</a></li>
+			<li><a href="#">联系我们6</a></li>
+			<li><a href="#">联系我们7</a></li>
+		</ul>
+		<address>&copy;2006-2018 甘肃农业大学 常杰版权所有 http://jigiser.win</address>
+	</div>
+</div>
 </body>
 </html>
