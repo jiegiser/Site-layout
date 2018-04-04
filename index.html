@@ -1,114 +1,78 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
-	<title>实战首页布局</title>
+	<title> 作品集</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="yahu.css">
-	<link rel="stylesheet" type="text/css" href="index.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div id="container">
-	<div id="header">
-		<img src="./images/logo.jpg" id="logo" alt="logo">
-		<ul id="nav">
-			<li><a href="#">导航1</a></li>
-			<li><a href="#">导航2</a></li>
-			<li><a href="#">导航3</a></li>
-			<li><a href="#">导航4</a></li>
-			<li><a href="#">导航5</a></li>
-			<li><a href="#">导航6</a></li>
-			<li><a href="#">导航7</a></li>
-		</ul>
-	</div>
-	<img id="banner" src="./images/about_banner.jpg">
-	<div id="main">
-		<div id="lside">
-			<div class="subtitle">
-				<img src="./images/circle.gif" alt=""/>
-				<h1>核心业务</h1>
-				<a href="#">MORE&gt;&gt;</a>
-			</div>
-			<div class="four">
-				<h2>电子商务网站建设</h2>
-				<img src="./images/eshop_service.jpg" alt="">
-				<ul>
-					<li><a href="#">方便的订单管理1</a></li>
-					<li><a href="#">方便的订单管理2</a></li>
-					<li><a href="#">方便的订单管理3</a></li>
-					<li><a href="#">方便的订单管理4</a></li>
-					<li><a href="#">方便的订单管理5</a></li>
-				</ul>
-			</div>
-			<div class="four">
-				<h2>电子商务网站建设</h2>
-				<img src="./images/eshop_service.jpg" alt="">
-				<ul>
-					<li><a href="#">方便的订单管理1</a></li>
-					<li><a href="#">方便的订单管理2</a></li>
-					<li><a href="#">方便的订单管理3</a></li>
-					<li><a href="#">方便的订单管理4</a></li>
-					<li><a href="#">方便的订单管理5</a></li>
-				</ul>
-			</div>
-			<div class="four">
-				<h2>电子商务网站建设</h2>
-				<img src="./images/eshop_service.jpg" alt="">
-				<ul>
-					<li><a href="#">方便的订单管理1</a></li>
-					<li><a href="#">方便的订单管理2</a></li>
-					<li><a href="#">方便的订单管理3</a></li>
-					<li><a href="#">方便的订单管理4</a></li>
-					<li><a href="#">方便的订单管理5</a></li>
-				</ul>
-			</div>
-			<div class="four">
-				<h2>电子商务网站建设</h2>
-				<img src="./images/eshop_service.jpg" alt="">
-				<ul>
-					<li><a href="#">方便的订单管理1</a></li>
-					<li><a href="#">方便的订单管理2</a></li>
-					<li><a href="#">方便的订单管理3</a></li>
-					<li><a href="#">方便的订单管理4</a></li>
-					<li><a href="#">方便的订单管理5</a></li>
-				</ul>
+	<!-- 导航条开始-->
+	<!-- 导航条，设置他固定在顶部 -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<!-- 用一个容器包裹nav中的内容 -->
+		<div class="container">
+			<!-- 导航条的头部，包含logo等 -->
+			<div class="navbar-header">
+				<!-- 设置logo -->
+				<a href="#" class="navbar-brand logo" style="text-align: center;line-height: 50px;"><span class="glyphicon glyphicon-home"> 返回</span></a>
+				<!-- 设置当显示屏幕放小时，导航条菜单会折叠，右上角会出现一个按钮用于点击显示菜单
+				其中data-toggle用于绑定js事件， data-target是绑定的折叠div的标签-->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+					<!-- 给折叠后打开导航菜单的按钮添加三个横线，美化样式 -->
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
 			</div>
 		</div>
-		<div id="rside">
-			<div class="subtitle">
-				<img src="./images/circle.gif" alt=""/>
-				<h1>文章观点</h1>
-				<a href="#">MORE&gt;&gt;</a>
-			</div>
-			<ul id="art">
-				<li><a href="#">文章列表1</a></li>
-				<li><a href="#">文章列表2</a></li>
-				<li><a href="#">文章列表3</a></li>
-				<li><a href="#">文章列表4</a></li>
-				<li><a href="#">文章列表5</a></li>
-			</ul>
-			<div class="subtitle">
-				<img src="./images/circle.gif" alt=""/>
-				<h1>联系我们</h1>
-				<a href="#">MORE&gt;&gt;</a>
-			</div>
-			<div id="contact"></div>
+	</nav>
+	<!-- 导航条结束 -->
+
+    <!-- 子栏目开始 -->
+    <!-- 子栏目的标题 -->
+    <div class="jumbotron">
+    	<div class="container">
+    		<hgroup>
+    			<h1>作品</h1>
+    			<h4>学习制作的网页...</h4>
+    		</hgroup>	
+    	</div>
+    </div>
+    <div id="case">
+    	<div class="container">
+    		<div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                   <div class="thumbnail">
+                       <a href="index2.html"><img src="./img/6.jpg"></a>
+                       <div class="caption">
+                           <h4>基于BootStrap实战构建网站</h4>
+                           <p>通过BootStrap来构建网页，美化网页内容</p>
+                       </div>
+                   </div>
+               </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                   <div class="thumbnail">
+                       <a href="index3.html"><img src="./img/9.jpg"></a>
+                       <div class="caption">
+                           <h4>培训结构网页</h4>
+                           <p>HTML+CSS构建网页，静态网页。</p>
+                       </div>
+                   </div>
+                </div>
+    		</div>
+    	</div>
+    </div>
+	<!-- 底部开始 -->
+	<footer id="footer">
+		<div class="container">
+			<p> 版权投诉</p> <p>© 2018-2019 <a href="http://jiegiser.win">jiegiser</a>. Powered by Bootstrap.</p> 
 		</div>
-		<!--由于我们的lside与rside已经浮动，foooter元素会在他们两个的下面，所以我们可以人为的添加一个空的div他的class为clr，用于专门清除浮动,那需要就添加-->
-		<div class="clr"></div>
-	</div>
-	<div id="footer">
-		<ul>
-			<li><a href="#">联系我们1</a></li>
-			<li><a href="#">联系我们2</a></li>
-			<li><a href="#">联系我们3</a></li>
-			<li><a href="#">联系我们4</a></li>
-			<li><a href="#">联系我们5</a></li>
-			<li><a href="#">联系我们6</a></li>
-			<li><a href="#">联系我们7</a></li>
-		</ul>
-		<address>&copy;2006-2018 甘肃农业大学 常杰版权所有 http://jigiser.win</address>
-	</div>
-</div>
+	</footer>
+	<!-- 底部结束 -->
+<script type="text/javascript" src="js/jQuery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
 </body>
 </html>
